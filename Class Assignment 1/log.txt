@@ -1,0 +1,6 @@
+GET Request / made by User
+GET Request / made by User
+GET Request /favicon.ico made by User
+GET Request /home made by User
+GET Request /about made by User
+GET Request /aboutus made by User

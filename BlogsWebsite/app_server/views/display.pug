@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1 Display Blogs
+    each blog in blogs
+        p #{blog.title}
+        p #{blog.snippet}
+        p #{blog.body}
+
+
+
+
+
