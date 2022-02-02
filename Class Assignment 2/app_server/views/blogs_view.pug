@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+        link(rel='stylesheet' href='../assets/bootstrap/css/bootstrap.min.css')
+        link(rel='stylesheet' href='../assets/fonts/ionicons.min.css')
+        link(rel='stylesheet' href='../assets/css/Footer-Basic.css')
+        link(rel='stylesheet' href='../assets/css/Navigation-Clean.css')
+        link(rel='stylesheet' href='../assets/css/styles.css')
+    body
+        each blog in blogs
+            div(style='padding: 20px;margin: 25px;margin-bottom: 20px;border: 1px solid var(--bs-blue);')
+                .row
+                    .col-3
+                        h1(style='color: var(--bs-red);') #{blog.title}
+                        h4(style='color: var(--bs-blue);') #{blog.snippet}
+                    .col-5
+                        p(style='color: var(--bs-purple);') #{blog.body}
+                    .col-4(style='text-align: right;')
+                        a(href='/blogs/' + blog.id)
+                            button#viewButton.btn.btn-primary.text-center(type='button' style='text-align: center;margin-right: 5px;margin-top: 20px;') View
+                        a(href='/blogs/' + blog.id + '/update')
+                            button.btn.btn-primary.text-center(type='button' style='text-align: center;margin-right: 5px;margin-top: 20px;') Update
+                        a(href='/blogs/' + blog.id + '/delete')
+                            button#deleteButton.btn.btn-primary.text-center(type='button' style='text-align: center;margin-top: 20px;') Delete
+
+            script(src='../assets/bootstrap/js/bootstrap.min.js')

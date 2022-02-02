@@ -1,0 +1,33 @@
+extends layout
+block content
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+        title Untitled
+        link(rel='stylesheet' href='../assets/bootstrap/css/bootstrap.min.css')
+        link(rel='stylesheet' href='../assets/fonts/ionicons.min.css')
+        link(rel='stylesheet' href='../assets/css/Footer-Basic.css')
+        link(rel='stylesheet' href='../assets/css/Navigation-Clean.css')
+        link(rel='stylesheet' href='../assets/css/styles.css')
+    body
+        h1(style='text-align: center;') Create Blog
+        div.create-blog.content
+        form(action='/blogs/create' style='padding: 25px;' method='POST')
+            .row(style='margin: 20px;')
+                .col
+                    label.col-form-label Title:
+                .col-10
+                    input.form-control(type='text' id="title" name='title' required)
+            .row(style='margin: 20px;')
+                .col
+                    label.col-form-label Snippet:
+                .col-10
+                    input.form-control(type='text' id="snippet" name='snippet' required)
+            .row(style='margin: 20px;')
+                .col
+                    label.col-form-label Body:
+                .col-10
+                    textarea.form-control(name='body' id="body" required)
+            .row(style='margin: 20px;')
+                .col-12(style='text-align: center;')
+                    button.btn.btn-primary.text-center(type='submit' style='text-align: center;') Submit Form
